@@ -6,7 +6,7 @@
 /*   By: aruiz-al <aruiz-al@student.42madrid.com>    +#+  +:+      +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/05 16:53:15 by aruiz-al          #+#    #+#             */
-/*   Updated: 2023/09/08 18:06:14 by aruiz-al         ###   ########.fr       */
+/*   Updated: 2023/09/11 12:02:25 by aruiz-al         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ int	what_to_print(va_list args, const char id)
 	else if (id == 'X')
 		return (ft_puthex_fd(va_arg(args, unsigned int), HEX_UP, 1));
 	else if (id == 'p')
-		return (ft_putstr_fd("0x", 1) + ft_puthex_fd(va_arg(args, uintptr_t), HEX_LOW, 1));
+		return (ft_putstr_fd("0x", 1)
+			+ ft_puthex_fd(va_arg(args, uintptr_t), HEX_LOW, 1));
 	return (0);
 }
 
